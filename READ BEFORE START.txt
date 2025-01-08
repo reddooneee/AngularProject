@@ -1,0 +1,7 @@
+Aggiornamento  8/01/2025
+    Inizio esercizio con creazione progetto (fatto delle prove prima), 
+
+Continuo Da Qui: https://angular.dev/tutorials/first-app/03-HousingLocation
+
+Aggiornamento  9/01/2025    
+...
