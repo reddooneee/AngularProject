@@ -4,4 +4,8 @@ Aggiornamento  8/01/2025
 Continuo Da Qui: https://angular.dev/tutorials/first-app/03-HousingLocation
 
 Aggiornamento  9/01/2025    
-...
+    
+    Continuo Lavoro 8/01/25:
+        Creazione dell'HousingLocation + Interfaccia HousingLocation.ts
+        
+        Continuo Da Qui: https://angular.dev/tutorials/first-app/09-services

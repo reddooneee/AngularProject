@@ -1,29 +1,11 @@
-import {Component} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HousingLocationComponent} from '../housing-location/housing-location.component';
-import {HousingLocation} from '../housinglocation';
-@Component({
-  selector: 'app-home',
-  imports: [CommonModule, HousingLocationComponent],
-  template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city" />
-        <button class="primary" type="button">Search</button>
-      </form>
-    </section>
-    <section class="results">
-      <app-housing-location
-        *ngFor="let housingLocation of housingLocationList"
-        [housingLocation]="housingLocation"
-      ></app-housing-location>
-    </section>
-  `,
-  styleUrls: ['./home.component.css'],
+import {Injectable} from '@angular/core';
+import {HousingLocation} from './housinglocation';
+@Injectable({
+  providedIn: 'root',
 })
-export class HomeComponent {
+export class HousingService {
   readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
-  housingLocationList: HousingLocation[] = [
+  protected housingLocationList: HousingLocation[] = [
     {
       id: 0,
       name: 'Acme Fresh Start Housing',
@@ -124,15 +106,11 @@ export class HomeComponent {
       wifi: true,
       laundry: true,
     },
-    {
-      id: 10,
-      name: 'RCOLOSSEO',
-      city: 'ROMA',
-      state: 'IT',
-      photo: `${this.baseUrl}/webaliser-_TPTXZd9mOo-unsplash.jpg`,
-      availableUnits: 6,
-      wifi: true,
-      laundry: true,
-    },
   ];
+  getAllHousingLocations(): HousingLocation[] {
+    return this.housingLocationList;
+  }
+  getHousingLocationById(id: number): HousingLocation | undefined {
+    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+  }
 }
