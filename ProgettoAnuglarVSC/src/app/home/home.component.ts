@@ -126,7 +126,7 @@ export class HomeComponent {
     },
     {
       id: 10,
-      name: 'RCOLOSSEO',
+      name: 'a casa der pupone francesco',
       city: 'ROMA',
       state: 'IT',
       photo: `${this.baseUrl}/webaliser-_TPTXZd9mOo-unsplash.jpg`,
